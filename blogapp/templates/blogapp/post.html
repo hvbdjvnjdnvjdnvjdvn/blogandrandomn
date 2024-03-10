@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post {{ post.title }}</title>
+</head>
+
+<body>
+    <h1>{{ post.title }}</h1>
+    <h2>Author {{ post.author }}</h2>
+    <h3>Date of publication {{ post.release_date }}</h3>
+    <section>
+        {% for p in content %}
+        <p>{{ p }}</p>
+        {% endfor %}
+    </section>
+    <section>
+        <h2>Comments</h2>
+        {% for comment in post.comment_set.all %}
+        <h3>{{ comment.author }}</h3>
+        <h4>{{ comment.create_date }}</h4>
+        {% if comment.change_date > comment.create_date %}
+        <p>Changed {{ comment.change_date }}</p>
+        {% endif %}
+        <p>
+            {{ comment.content }}
+        </p>
+        {% empty %}
+        <p>No comment</p>
+        {% endfor %}
+    </section>
+</body>
+
+</html>
