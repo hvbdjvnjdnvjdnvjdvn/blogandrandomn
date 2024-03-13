@@ -24,5 +24,4 @@ urlpatterns = [
     path('randomapp/', include('randomapp.urls')),
     path('les3/', include('myapp3.urls')),
     path('blog/', include('blogapp.urls')),
-    path('__debug__/', include("debug_toolbar.urls")),
 ]
