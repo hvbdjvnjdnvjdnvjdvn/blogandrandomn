@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'myapp3',
     'myapp4',
     'myapp5',
-    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
