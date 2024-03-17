@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'myapp2',
     'blogapp',
     'myapp3',
-    #'myapp4',
+    'myapp4',
 ]
 
 MIDDLEWARE = [
